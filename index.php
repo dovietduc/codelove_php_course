@@ -7,6 +7,7 @@ class View {
     {
         $dirRoot = __DIR__;
         $pathView = $dirRoot . '/' . $path;
+        $a = 1;
         require_once $pathView;
     }
 }
