@@ -7,7 +7,7 @@ class View {
     {
 
         $dirRoot = __DIR__;
-        $pathView = $dirRoot . '/' . $path;
+        $pathView = $dirRoot . '/views/' . $path;
 
         // tao ra bien tuong ung voi value khi loop qua moi phan tu mang
         extract($data);
@@ -38,7 +38,7 @@ class ProductController {
         // 2. Hiển thị dữ liệu lấy được ra view
         $view = new View();
         $view->render(
-            'views/product/index.php',
+            'product/index.php',
             [
                 'products' => $products
             ]
@@ -52,3 +52,5 @@ class ProductController {
 // Instance Controller
 $productController = new ProductController();
 $productController->index();
+
+// routing -> math (path) --> action (controller)
